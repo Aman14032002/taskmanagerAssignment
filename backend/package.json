@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "Task manager",
     "Tasks"
   ],
-  "author": "Aayush",
+  "author": "Aman",
   "license": "ISC",
   "description": "The backend part of simple task manager with user authentication",
   "dependencies": {

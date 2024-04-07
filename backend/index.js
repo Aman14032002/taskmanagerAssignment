@@ -3,8 +3,10 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require("path");
 const cors = require("cors");
-require("dotenv").config();
-mongoose.connect("mongodb://localhost:27017/mydatabase");
+
+require('dotenv').config();
+const e=process.env;
+//  mongoose.connect("mongodb://localhost:27017/mydatabase");
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
@@ -12,7 +14,7 @@ const profileRoutes = require("./routes/profileRoutes");
 app.use(express.json());
 app.use(cors());
 
-const mongoUrl = process.env.MONGODB_URL;
+const mongoUrl = e.MONGODB_URL;
 mongoose.connect(mongoUrl, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
